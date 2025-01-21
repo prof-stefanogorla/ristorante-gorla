@@ -21,6 +21,17 @@ class Piatto:
 		allergeni_str = f" | Allergeni: {self.mostra_allergeni()}" if self.allergeni else ""
 		return f"{self.nome} ({self.tipo}) - {self.prezzo:.2f} Euro. {self.calorie} Allergeni: {allergeni_str}"  
 
+
+class PiattoSpeciale(Piatto):
+	def __init__(self, nome, prezzo, tipo, descrizione_speciale):
+		super().__init__(nome, prezzo, tipo)
+		self.descrizione_speciale = descrizione_speciale
+	
+	def __str__(self):
+		base_str = super().__str__()
+		return f"{base_str} | Speciale: {self.descrizione_speciale}"
+
+
 class Ristorante:
 	def __init__(self, nome):
 		self.nome = nome
