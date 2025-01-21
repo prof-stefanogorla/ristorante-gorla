@@ -1,11 +1,12 @@
 class Piatto:
-    def __init__(self, nome, prezzo, tipo):
+    def __init__(self, nome, prezzo, tipo, calorie):
         self.nome = nome
         self.prezzo = prezzo
         self.tipo = tipo
+        self.calorie = calorie
 
     def __str__(self):
-        return f"{self.nome} ({self.tipo}) - {self.prezzo:.2f} Euro"
+        return f"{self.nome} ({self.tipo}) - {self.prezzo:.2f} Euro. {self.calorie} cal"
     
 class Menu:
     def __init__(self):
