@@ -1,8 +1,9 @@
 class Piatto:
-	def __init__(self, nome, prezzo, tipo):
+	def __init__(self, nome, prezzo, tipo, calorie):
 		self.nome = nome
 		self.prezzo = prezzo
 		self.tipo = tipo
+		self.calorie = calorie
 		self.allergeni = []
 
 	def aggiungi_allergene(self, allergene):
@@ -18,7 +19,7 @@ class Piatto:
 	
 	def __str__(self):
 		allergeni_str = f" | Allergeni: {self.mostra_allergeni()}" if self.allergeni else ""
-		return f"{self.nome} ({self.tipo}) - {self.prezzo:.2f} Euro. Allergeni: {allergeni_str}"  
+		return f"{self.nome} ({self.tipo}) - {self.prezzo:.2f} Euro. {self.calorie} Allergeni: {allergeni_str}"  
 
 class Ristorante:
 	def __init__(self, nome):
