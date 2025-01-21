@@ -45,4 +45,5 @@ class Ristorante:
 		nome = input("Inserisci il nome del piatto: ")
 		prezzo = float(input("Inserisci il prezzo: "))
 		tipo = input("Inserisci il tipo: ")
-		self.menu.aggiungi_piatto(Piatto(nome, prezzo, tipo))
+		calorie = input("Inserisci le calorie: ")
+		self.menu.aggiungi_piatto(Piatto(nome, prezzo, tipo, calorie))
